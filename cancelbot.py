@@ -1,7 +1,7 @@
 from linepy import *
 import time
 
-cl = LINE('apaankeek18@gmail.com','Muhamad18')
+cl = LINE('mkhadaffy1805@gmail.com','Muhamad18')
 #cl = LINE('EunGJlvq37U5sDc2Xjp1.r7LQgKdASAz0gOQcFUAR4q.zO3QLPsg5MJojipCN1goRhUWX/AxEOQ+3X2DfcenY04=')
 
 #cl.log("Auth Token : " + str(line.authToken))
@@ -18,20 +18,22 @@ while True:
                     cl.sendMessage(op.param1,'Cancelling..')
                 if (op.type == 25):
                     msg = op.message
-                    if (msg.text.lower() == 'start!'):
+                    if (msg.text.lower() == 'cancel on'):
                         s = time.time()
-                        cl.sendMessage('Speed!')
+                        cl.sendMessage('Rin sp')
                         e = time.time() - s
                         cl.sendMessage('{:.14f}'.format(e))
                     if ('cancelling~' in msg.text.lower()):
                         g = cl.getCompactGroup(msg.to)
+                        #Ownerz = "uac8e3eaf1eb2a55770bf10c3b2357c33"
                         mids = [i.mid for i in g.invitee]
                         for mid in mids:
                             try:
                                 cl.cancelGroupInvitation(msg.to,[mid])
                             except Exception as e:
                                 pass
-                        cl.sendMessage(msg.to,'Done!\nline://ti/p/~heefpuy')
+                        #cl.sendMessage(msg.to,'Done!\nline://ti/p/~heefpuy')
+                        cl.sendContact(msg.to,'uac8e3eaf1eb2a55770bf10c3b2357c33')
                         cl.leaveGroup(msg.to)
                 poll.setRevision(op.revision)
     except Exception as e:
