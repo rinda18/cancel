@@ -1,7 +1,7 @@
 from linepy import *
 import time
 
-cl = LINE('mkhadaffy1805@gmail.com','Muhamad18')
+cl = LINE('@gmail.com','')
 #cl = LINE('EunGJlvq37U5sDc2Xjp1.r7LQgKdASAz0gOQcFUAR4q.zO3QLPsg5MJojipCN1goRhUWX/AxEOQ+3X2DfcenY04=')
 
 #cl.log("Auth Token : " + str(line.authToken))
